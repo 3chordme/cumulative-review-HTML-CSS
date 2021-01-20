@@ -1,0 +1,182 @@
+* {
+    border: 1px solid black;
+}
+
+h1 {
+    color: red;
+}
+
+p {
+    font-size: 8px;
+}
+
+.bigFontDiv {
+    font-size: 32px;
+}
+
+#bigFontArticle {
+    font-size: 48px;
+}
+
+.catImage {
+    
+}
+
+.imageContainer {
+    width: 800px;
+}
+
+.caption {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    padding: 20px;
+    margin: 70px;
+}
+
+/* THIS IS OUR FLEX SECTION */
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    height: 200px;
+    width: 600px;
+    background-color: lightGray;
+    margin-top: 1000px;
+}
+
+.flex-container div {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+}
+
+.flex-item-two {
+    align-self: center;
+}
+
+.flex-item-one {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* THIS IS OUR GRID SECTION */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 33% 67%; /* two columns, left column is 33% right column is 67% */
+    grid-template-rows: 1fr 10fr; /* 1fr + 10fr = 11fr ... 1fr/11fr = height of first element*/
+    height: 1200px;
+    width: 100%;
+    background-color: lightBlue;
+    margin-top: 1000px;
+    grid-template-areas:
+        "sidebar header"
+        "sidebar main";
+}
+
+.grid-item-one {
+    background-color: pink;
+    grid-area: sidebar;
+}
+
+.grid-item-two {
+    background-color: blue;
+    grid-area: header;
+}
+
+.grid-item-three {
+    background-color: orange;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 2;
+    grid-template-areas: 
+        "saltWaterTaffy two"
+        "three four";
+}
+
+.grid-grandchild-one, .grid-grandchild-two, .grid-grandchild-three, .grid-grandchild-four {
+    background-color: purple;
+}
+
+.grid-grandchild-one {
+    grid-area: saltWaterTaffy;
+}
+
+.grid-grandchild-two {
+    grid-area: two;
+}
+
+.grid-grandchild-three {
+    grid-area: three;
+}
+
+.grid-grandchild-four {
+    grid-area: four;
+}
+
+/* TRANSFORM, TRANSITION, AND ANIMATE */
+
+.transform-container {
+    margin-top: 1000px;
+    background-color: aquamarine;
+    width: 800px;
+    height: 900px;
+}
+
+.transform-container div {
+    width: 100px;
+    height: 100px;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+.transform-one {
+    transform: rotate(20deg);
+}
+
+.transform-two {
+    transform: scale(1, 1.5);
+}
+
+.transform-three {
+    transform: translate(50px, 10px);
+}
+
+.transition-one {
+    transition: background-color 1s ease,
+                width 1s ease;
+    background-color: red;
+}
+
+.transition-one:hover {
+    background-color: green;
+    width: 120px;
+    cursor: pointer;
+}
+
+.animate-one {
+    animation: demo 3s infinite;
+}
+
+@keyframes demo {
+    0% {
+        background-color: yellow;
+    }
+    10% {
+        margin-top: 50px;
+    }
+    12% {
+        margin-top: 100px;
+    }
+    50% {
+        height: 120px;
+        width: 120px;
+        background-color: yellow;
+    }
+    100% {
+        margin-left: 100px;
+    }
+}
